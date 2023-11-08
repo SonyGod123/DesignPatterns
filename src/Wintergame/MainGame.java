@@ -3,6 +3,7 @@ package Wintergame;
 import org.newdawn.slick.*;
 import org.newdawn.slick.tests.AnimationTest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainGame extends BasicGame {
@@ -10,7 +11,6 @@ public class MainGame extends BasicGame {
     private RectActor rect1;
     private OvalActor oval1;
 
-    private List<Snowflakes> snowflakes;
 
 
     public MainGame(String title) {
@@ -23,6 +23,7 @@ public class MainGame extends BasicGame {
         this.ca1 = new CircleActor(100,100, 10);
         this.rect1 = new RectActor(50,50,50);
         this.oval1 = new OvalActor(20,20, 20);
+
 
     }
 
@@ -41,7 +42,8 @@ public class MainGame extends BasicGame {
         this.ca1.render(graphics);
         this.oval1.render(graphics);
         this.rect1.render(graphics);
-    }
+        }
+
     public static void main(String[] argv) {
         try {
             AppGameContainer container = new AppGameContainer(new MainGame("Wintergame"));
