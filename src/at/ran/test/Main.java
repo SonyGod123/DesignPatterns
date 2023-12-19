@@ -5,23 +5,27 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<PetStore> petStore = new ArrayList<>();
 
 
             Person person = new Person("Jan", "Tschabrun");
+            PetStore petStore = new PetStore(person);
             System.out.println(person.printName());
+
             Cat cat = new Cat("bobby");
             System.out.println(cat.getName());
-            petStore.add(cat);
+            petStore.addAnimals(cat);
+
+
 
             Dog dog = new Dog("Tobias");
             System.out.println(dog.getName());
-            petStore.add(dog);
+            petStore.addAnimals(dog);
+
+            petStore.printAllAnimals();
+            petStore.getOwner();
 
 
-            for (PetStore element : petStore) {
-                System.out.println(element);
-            }
+
 
         }
     }
